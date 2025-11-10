@@ -15,6 +15,9 @@ import TicTacToe from "./pages/games/TicTacToe.tsx";
 import MemoryMatch from "./pages/games/MemoryMatch.tsx";
 import Snake from "./pages/games/Snake.tsx";
 import NumberGuess from "./pages/games/NumberGuess.tsx";
+import RockPaperScissors from "./pages/games/RockPaperScissors.tsx";
+import Game2048 from "./pages/games/Game2048.tsx";
+import ReactionTime from "./pages/games/ReactionTime.tsx";
 import "./types/global.d.ts";
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
@@ -57,6 +60,9 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/games/memory" element={<MemoryMatch />} />
             <Route path="/games/snake" element={<Snake />} />
             <Route path="/games/numberguess" element={<NumberGuess />} />
+            <Route path="/games/rockpaperscissors" element={<RockPaperScissors />} />
+            <Route path="/games/2048" element={<Game2048 />} />
+            <Route path="/games/reactiontime" element={<ReactionTime />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

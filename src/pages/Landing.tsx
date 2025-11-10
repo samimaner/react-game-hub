@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Gamepad2, Grid3x3, Brain, Worm, Hash, Trophy, User } from "lucide-react";
+import { Gamepad2, Grid3x3, Brain, Worm, Hash, Trophy, User, Hand, Grid2x2, Zap } from "lucide-react";
 import { GameCard } from "@/components/GameCard";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router";
@@ -37,6 +37,27 @@ export default function Landing() {
       icon: Hash,
       path: "/games/numberguess",
       color: "#C7CEEA",
+    },
+    {
+      title: "Rock Paper Scissors",
+      description: "Classic hand game against computer",
+      icon: Hand,
+      path: "/games/rockpaperscissors",
+      color: "#FFB6C1",
+    },
+    {
+      title: "2048",
+      description: "Combine tiles to reach 2048",
+      icon: Grid2x2,
+      path: "/games/2048",
+      color: "#FAF8EF",
+    },
+    {
+      title: "Reaction Time",
+      description: "Test how fast you can react",
+      icon: Zap,
+      path: "/games/reactiontime",
+      color: "#E0BBE4",
     },
   ];
 
@@ -87,7 +108,7 @@ export default function Landing() {
             PLAY & WIN
           </h1>
           <p className="text-2xl md:text-3xl font-bold text-white drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] mb-8">
-            Four awesome games to test your skills!
+            Seven awesome games to test your skills!
           </p>
           <motion.div
             initial={{ scale: 0 }}

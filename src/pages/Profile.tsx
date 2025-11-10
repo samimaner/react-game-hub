@@ -37,6 +37,9 @@ export default function Profile() {
     memory: "Memory Match",
     snake: "Snake",
     numberguess: "Number Guess",
+    rockpaperscissors: "Rock Paper Scissors",
+    "2048": "2048",
+    reactiontime: "Reaction Time",
   };
 
   return (
