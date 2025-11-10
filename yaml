@@ -25,7 +25,7 @@ jobs:
       - run: pnpm install
       - run: pnpm build
         env:
-          VITE_CONVEX_URL: ${{ secrets.VITE_CONVEX_URL }}
+          VITE_CONVEX_URL: ${{ https://wonderful-kingfisher-903.convex.cloud }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
