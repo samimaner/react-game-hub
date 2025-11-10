@@ -10,11 +10,14 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router";
 import "./index.css";
 import Landing from "./pages/Landing.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Profile from "./pages/Profile.tsx";
+import TicTacToe from "./pages/games/TicTacToe.tsx";
+import MemoryMatch from "./pages/games/MemoryMatch.tsx";
+import Snake from "./pages/games/Snake.tsx";
+import NumberGuess from "./pages/games/NumberGuess.tsx";
 import "./types/global.d.ts";
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
-
-
 
 function RouteSyncer() {
   const location = useLocation();
@@ -39,7 +42,6 @@ function RouteSyncer() {
   return null;
 }
 
-
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <VlyToolbar />
@@ -49,7 +51,12 @@ createRoot(document.getElementById("root")!).render(
           <RouteSyncer />
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/auth" element={<AuthPage redirectAfterAuth="/" />} /> {/* TODO: change redirect after auth to correct page */}
+            <Route path="/auth" element={<AuthPage redirectAfterAuth="/profile" />}/>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/games/tictactoe" element={<TicTacToe />} />
+            <Route path="/games/memory" element={<MemoryMatch />} />
+            <Route path="/games/snake" element={<Snake />} />
+            <Route path="/games/numberguess" element={<NumberGuess />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
